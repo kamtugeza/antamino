@@ -1,28 +1,28 @@
 import { describe, expect, it } from 'vitest'
-import Pathfarer from '../lib/pathfarer'
+import Antamino from '../lib/antamino'
 
 describe('from', () => {
   it('creates an instance of the BasicNode', () => {
-    expect(Pathfarer.from()).toEqual(new Pathfarer())
+    expect(Antamino.from()).toEqual(new Antamino())
   })
 })
 
 describe('insert/lookup', () => {
   it('returns the value of the root node', () => {
-    const instance = new Pathfarer().insert('', 1)
+    const instance = new Antamino().insert('', 1)
 
     expect(instance.lookup('')).toEqual({ value: 1 })
   })
 
   it('returns the value of the node with a unique static path', () => {
-    const instance = new Pathfarer().insert('create/article', 1).insert('read/article', ['abc'])
+    const instance = new Antamino().insert('create/article', 1).insert('read/article', ['abc'])
 
     expect(instance.lookup('create/article')).toEqual({ value: 1 })
     expect(instance.lookup('read/article')).toEqual({ value: ['abc'] })
   })
 
   it('returns the value of the node with shared part of the static path', () => {
-    const instance = new Pathfarer()
+    const instance = new Antamino()
       .insert('create/article', 'abc')
       .insert('create/user', { name: 'Rick Sanchez' })
       .insert('read/article', 'The article name is "abc"')
@@ -43,13 +43,13 @@ describe('insert/lookup', () => {
   })
 
   it('overrides the previous node value', () => {
-    const instance = new Pathfarer().insert('create/article', 'abc').insert('create/article', 'def')
+    const instance = new Antamino().insert('create/article', 'abc').insert('create/article', 'def')
 
     expect(instance.lookup('create/article')).toEqual({ value: 'def' })
   })
 
   it('returns the value of the node with unique parametrized path', () => {
-    const instance = new Pathfarer()
+    const instance = new Antamino()
       .insert(':root', 'abc')
       .insert(':test/:nested', 123)
       .insert(':method/:category/:article', { author: 'Rick Sanchez' })
@@ -69,7 +69,7 @@ describe('insert/lookup', () => {
   })
 
   it('returns the lookup result of the mock application routes', () => {
-    const instance = new Pathfarer()
+    const instance = new Antamino()
       .insert('read/', { title: 'Home' })
       .insert('read/blog', { title: 'Blog' })
       .insert('read/blog/:category', { title: 'Category' })
