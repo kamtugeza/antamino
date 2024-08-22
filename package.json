@@ -1,9 +1,9 @@
 {
-  "name": "pathfarer",
-  "version": "0.3.0",
+  "name": "antamino",
+  "version": "0.4.0",
   "author": "Oleksii Novikov <oleksii@novikraft.com>",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "vitest",
     "test:ci": "vitest run --coverage"
