@@ -9,15 +9,18 @@
   - [lookup(path)](#lookuppath)
 - [License](#license)
 
-**Antamino** is a lightweight, zero-dependency routing storage solution built on the Radix Tree algorithm.
+**Antamino** is a lightweight, zero-dependency routing storage solution built on the Radix Tree.
 
 Designed for simplicity, Antamino allows you to associate various values — such as functions, objects, or primitives — with routes that include static and parameterized segments. While it provides essential routing functionality, those requiring more advanced features may consider exploring [find-my-way](https://github.com/delvedor/find-my-way/tree/main), which powers [Fastify](https://github.com/fastify/fastify)'s routing and is actively maintained by its contributors.
 
 The name “Antamino” is inspired by the blend of words "ant" and “camino” (meaning “path” in Spanish), which symbolizes both direction and small but efficient movement.
 
+
 ## Installation
 
-TBD
+```bash
+npm i antamino
+```
 
 ## Usage
 
