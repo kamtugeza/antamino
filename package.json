@@ -1,13 +1,33 @@
 {
   "name": "antamino",
   "version": "0.4.0",
+  "description": "A lightweight, zero-dependency routing storage solution.",
   "author": "Oleksii Novikov <oleksii@novikraft.com>",
   "license": "MIT",
   "type": "commonjs",
+  "main": "./lib/antamino.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "test": "vitest",
     "test:ci": "vitest run --coverage"
   },
+  "homepage": "https://github.com/kamtugeza/antamino#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamtugeza/antamino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamtugeza/antamino/issues"
+  },
+  "keywords": ["routing", "storage", "path", "url", "radix"],
+  "files": [
+    "lib",
+    "LICENSE.md",
+    "package.json",
+    "README.md"
+  ],
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@vitest/coverage-v8": "^2.0.5",

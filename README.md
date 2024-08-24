@@ -15,9 +15,12 @@ Designed for simplicity, Antamino allows you to associate various values — suc
 
 The name “Antamino” is inspired by the blend of words "ant" and “camino” (meaning “path” in Spanish), which symbolizes both direction and small but efficient movement.
 
+
 ## Installation
 
-TBD
+```bash
+npm i antamino
+```
 
 ## Usage
 
