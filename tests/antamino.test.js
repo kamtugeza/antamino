@@ -100,4 +100,14 @@ describe('insert/lookup', () => {
       value: { title: 'Create an Article' },
     })
   })
+
+  it('ignores search params', () => {
+    const instance = new Antamino()
+      .insert('read/', { title: 'Home' })
+      .insert('read/blog?category=science', { title: 'Blog' })
+
+    expect(instance.lookup('read/blog')).toEqual({
+      value: { title: 'Blog' },
+    })
+  })
 })
